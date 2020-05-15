@@ -4,14 +4,13 @@
 #
 Name     : R-rbenchmark
 Version  : 1.0.0
-Release  : 11
+Release  : 12
 URL      : https://cran.r-project.org/src/contrib/rbenchmark_1.0.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rbenchmark_1.0.0.tar.gz
 Summary  : Benchmarking routine for R
 Group    : Development/Tools
 License  : GPL-2.0+
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
 is intended to facilitate benchmarking of arbitrary R code. The
@@ -25,21 +24,22 @@ is intended to facilitate benchmarking of arbitrary R code. The
 
 %prep
 %setup -q -c -n rbenchmark
+cd %{_builddir}/rbenchmark
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571884280
+export SOURCE_DATE_EPOCH=1589525814
 
 %install
-export SOURCE_DATE_EPOCH=1571884280
+export SOURCE_DATE_EPOCH=1589525814
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
