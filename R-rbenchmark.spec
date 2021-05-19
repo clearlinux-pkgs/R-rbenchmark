@@ -4,7 +4,7 @@
 #
 Name     : R-rbenchmark
 Version  : 1.0.0
-Release  : 17
+Release  : 18
 URL      : https://cran.r-project.org/src/contrib/rbenchmark_1.0.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rbenchmark_1.0.0.tar.gz
 Summary  : Benchmarking routine for R
